@@ -5,9 +5,7 @@
 const express = require("express");
 
 const cors = require("cors");
-const corsOptions = {
-  origin: '*',
-}
+
 
 const { NotFoundError } = require("./expressError");
 
@@ -21,7 +19,11 @@ const morgan = require("morgan");
 
 const app = express();
 
-app.use(cors(corsOptions));
+app.use(cors({
+  origin: process.env.NODE_ENV === 'production' ? 'https://abounding-sea-mm.surge.sh/' : 'http://localhost:3002',
+  credentials: true
+}));
+
 app.use(express.json());
 app.use(morgan("tiny"));
 app.use(authenticateJWT);
