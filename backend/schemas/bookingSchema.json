@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://our.company.com/bookingNew.schema.json",
+    "type": "object",
+    "properties": {
+      "username": {
+        "type": "string"
+      },
+      "dog_id": {
+        "type": "string"
+      },
+      "start_date": {
+        "type": "string"
+      },
+      "end_date": {
+        "type": "string"
+      }
+    },
+    "additionalProperties": false,
+    "required": ["username", "dog_id", "start_date", "end_date"]
+  }
+  

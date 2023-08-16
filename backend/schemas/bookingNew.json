@@ -1,0 +1,27 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://our.company.com/companyNew.schema.json",
+    "type": "object",
+    "properties": {
+        "username": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 30
+        },
+        "date": {
+            "type": "date"
+        },
+        "dog": {
+            "type": "integer"
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+      "username",
+      "name",
+      "age",
+      "breed",
+      "gender"
+    ]
+  }
+  
