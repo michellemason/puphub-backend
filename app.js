@@ -19,10 +19,12 @@ const morgan = require("morgan");
 
 const app = express();
 
-app.use(cors({
-  origin: process.env.NODE_ENV === 'production' ? 'https://abounding-sea-mm.surge.sh/' : 'http://localhost:3002',
-  credentials: true
-}));
+// app.use(cors({
+//   origin: process.env.NODE_ENV === 'production' ? 'https://abounding-sea-mm.surge.sh/' : 'http://localhost:3002',
+//   credentials: true
+// }));
+
+app.use(cors({ origin: '*' });
 
 app.use(express.json());
 app.use(morgan("tiny"));
