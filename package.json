@@ -2,6 +2,9 @@
   "name": "puphub-backend",
   "version": "2.0.0",
   "main": "server.js",
+  "engines": {
+    "node": "16.15.0"
+  },
   "scripts": {
     "start": "node server/app.js",
     "postinstall": "cd server && npm install --save",
